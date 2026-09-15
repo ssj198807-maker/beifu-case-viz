@@ -1,73 +1,61 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>② 关键时间线 · 倍富案可视化</title>
+<title>倍富案 · 关键时间线 | 律师阅卷版</title>
+<script>document.documentElement.dataset.theme=localStorage.getItem('beifu-theme')||'light';</script>
 <link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/theme.js" defer></script>
 </head>
 <body>
-<header class="top">
-  <h1>② 关键时间线</h1>
-  <p>从 0 元转让、保全延误、破产受理到合并破产裁定的全节点 · 已脱敏</p>
-</header>
-<nav class="bar">
-  <a class="home" href="../index.html">◆ 总览</a>
-  <a href="parties.html">当事人图谱</a>
-  <a href="timeline.html">时间线</a>
-  <a href="winrate.html">路径胜率</a>
-  <a href="legal.html">法律依据</a>
-  <a href="precedents.html">关键判例</a>
-  <a href="statecomp.html">国赔路径</a>
-  <a href="roadmap.html">行动路线</a>
-  <span class="spacer"></span>
-  <button class="theme-btn">🌙 深色</button>
-</nav>
+<header id="site-header"></header>
+<main class="doc">
 
-<div class="wrap">
+  <div class="doc-head">
+    <div class="crumbs"><a href="../index.html">倍富案 · 总览</a> › 关键时间线</div>
+    <h1>② 关键时间线</h1>
+    <div class="meta"><b>焦点</b>：0 元转让节点 · 保全延误违法日 · 破产受理/合并裁定 · 国赔时效起算与届满</div>
+  </div>
 
-  <section class="block">
-    <h2 class="sec"><span class="idx">2.1</span>全案时间线</h2>
-    <p class="lead">颜色标记：<span class="tag t-coral">股权/逃废债</span> <span class="tag t-teal">我方动作</span> <span class="tag t-amber">破产程序</span> <span class="tag t-gray">刑事/公权力</span> <span class="tag t-red" style="background:var(--coral)">违法/届满</span></p>
+  <nav class="toc"><span class="toc-t">本页目录：</span>
+    <a href="#s1">一、关键时间线</a><a href="#s2">二、日期生死线</a></nav>
 
+  <section id="s1">
+    <h2 class="sec"><span class="idx">一</span>关键时间线</h2>
     <div class="tl">
-      <div class="ev coral"><div class="date">2022-10-27</div><div class="desc"><b>首次 0 元转让（剥离出中通体系）</b>：中通系（王吉雷）将双彩 D1 股权 0 元转让给陆亦杰 + 杨周。逃废债时间窗开启。</div></div>
-      <div class="ev gray"><div class="date">2023-03</div><div class="desc">上海双彩经理洪丽雅经手以微信发"还款协议"，要求债权人先承诺不追责中通；各债权方均未签署。</div></div>
-      <div class="ev coral"><div class="date">2023-07-07</div><div class="desc"><b>保全期间二次 0 元转让</b>：原法人王吉雷将股权变更给陆亦杰。发生在诉讼/保全期间，被质疑"责任逃逸、股权变更时间窗"。</div></div>
-      <div class="ev teal"><div class="date">2023-12-18</div><div class="desc"><b>倍富向南陵法院递交（并被接收）上海双彩吉账号保全申请</b>（宁波银行 70250122000061164）。保全程序依法启动——后续迟延构成国赔违法事实的起点。</div></div>
-      <div class="ev" style="--c:var(--coral)"><div class="date">2024-01-08　⚠ 违法节点</div><div class="desc">该账户进账 3,477,757.20 元，<b>当日即转出</b>：深圳华创智动化 46 万 + 南陵县人社局代发工资 300 万。法院迟延约 20 天未保全，致可执行财产灭失。</div></div>
-      <div class="ev amber"><div class="date">2024-06-21</div><div class="desc">芜湖中院裁定受理双彩破产（(2024)皖02破申18号）。个别执行中止、集中管辖起点。</div></div>
-      <div class="ev amber"><div class="date">2024-06-28</div><div class="desc">南陵法院受理破产。执行保全延误（"过20天保全"）进入申请执行回转 / 国家赔偿视野。</div></div>
-      <div class="ev amber"><div class="date">2024-09-25</div><div class="desc">南陵法院指定管理人——广东广和（芜湖）律师事务所。接管破产财产、启动追收。</div></div>
-      <div class="ev teal"><div class="date">2025-02-06</div><div class="desc"><b>倍富提交国家赔偿申请书修改版</b>，以书面主张权利锁定"知道日"（后作为 2027-02-06 届满起算的硬证据）。</div></div>
-      <div class="ev amber"><div class="date">2025-02-26</div><div class="desc"><b>裁定 D1 与 D2 合并破产</b> → 人格混同成为<b>免证事实</b>；管理人报告认定"财产不独立、人格高度混同"。</div></div>
-      <div class="ev amber"><div class="date">2025-07-18</div><div class="desc">第一次债权人会议（南陵县法院 5 号法庭）。管理人执行职务报告、债权申报审查、财务状况审计一并披露。</div></div>
-      <div class="ev gray"><div class="date">2025 全年</div><div class="desc">刑事报案：南公(刑)不立字【2025】52号 不立案；芜公刑复核字【2025】53号 复核。</div></div>
-      <div class="ev gray"><div class="date">2026-01</div><div class="desc">南陵县人民检察院 南检立监审通【2026】1号 立案监督审查通知——推动拒执罪立案监督。</div></div>
-      <div class="ev teal"><div class="date">2026 起</div><div class="desc">并行推进：国家赔偿、逼管理人追收（撤销/无效）、联合大额债权人（精彩1740万、南陵中通2100万）、第三人侵权窄缝。</div></div>
-      <div class="ev coral"><div class="date">2027-02-06　⏰ 时效届满</div><div class="desc"><b>国家赔偿 2 年时效届满日</b>（以 2025-02-06 知道日起算）。在此之前须由律师以"知道日"定稿并提交。</div></div>
+      <div class="ev coral"><div class="date">2022-10-27</div><div class="desc"><b>首次 0 元转让</b>：中通系将双彩 D1 股权 0 元转让给陆亦杰+杨周，逃废债时间窗开启。</div></div>
+      <div class="ev coral"><div class="date">2023-07-07</div><div class="desc"><b>保全期间二次 0 元转让</b>：原法人王吉雷变更给陆亦杰，被质疑"责任逃逸"。</div></div>
+      <div class="ev teal"><div class="date">2023-12-18</div><div class="desc"><b>倍富递交（并被接收）上海双彩吉账号保全申请</b>——后续迟延构成国赔违法事实起点。</div></div>
+      <div class="ev"><div class="date">2024-01-08　⚠ 违法节点</div><div class="desc">账户进账 347 万，<b>当日即转出</b>。法院迟延约 20 天未保全，致可执行财产灭失。</div></div>
+      <div class="ev amber"><div class="date">2024-06-21 / 06-28</div><div class="desc">芜湖中院 / 南陵法院受理破产。个别执行中止、集中管辖起点。</div></div>
+      <div class="ev amber"><div class="date">2024-09-25</div><div class="desc">南陵法院指定管理人——广东广和（芜湖）律师事务所。</div></div>
+      <div class="ev teal"><div class="date">2025-02-06</div><div class="desc"><b>倍富提交国赔申请书修改版</b>，锁定"知道日"（2027-02-06 届满起算硬证据）。</div></div>
+      <div class="ev amber"><div class="date">2025-02-26</div><div class="desc"><b>裁定 D1 与 D2 合并破产</b> → 人格混同成为<b>免证事实</b>。</div></div>
+      <div class="ev amber"><div class="date">2025-07-18</div><div class="desc">第一次债权人会议；管理人认定"财产不独立、人格高度混同"。</div></div>
+      <div class="ev gray"><div class="date">2025–2026</div><div class="desc">刑事报案不立案 52 号 + 复核 53 号；南检立监审通 2026-1 号 立案监督。</div></div>
+      <div class="ev coral"><div class="date">2027-02-06　⏰ 时效届满</div><div class="desc"><b>国家赔偿 2 年时效届满日</b>（以 2025-02-06 知道日起算）。</div></div>
     </div>
   </section>
 
-  <section class="block">
-    <h2 class="sec"><span class="idx">2.2</span>日期生死线（决定"能不能撤、能不能追、适用哪条法"）</h2>
+  <section id="s2">
+    <h2 class="sec"><span class="idx">二</span>日期生死线</h2>
     <table>
-      <tr><th>节点</th><th>决定了什么</th><th>去哪查</th></tr>
-      <tr><td><b>双彩破产受理日</b></td><td>第19/21条中止起点；临界期（1年/6个月）起算点</td><td>第一次债权人会议资料、受理裁定书</td></tr>
-      <tr><td><b>中通 0 元转让发生日</b></td><td>在 2024-07-01 后→适用新《公司法》第 88 条（转让人补责，不论恶意）；在前→按原法精神看恶意（最高院 2024-12-24 批复）</td><td>股权变更图、工商档案</td></tr>
-      <tr><td><b>各抽逃出资行为日</b></td><td>是否在破产临界期内、是否构成第 33 条无效行为</td><td>银行流水（证据材料/财务流水）</td></tr>
-      <tr><td><b>倍富判决生效日</b></td><td>是否早于破产受理（影响债权性质）</td><td>二审终审判决书、再审裁定书</td></tr>
-      <tr><td><b>国赔知道日 2025-02-06</b></td><td>国家赔偿 2 年时效起算（届满 2027-02-06）</td><td>国赔申请书修改版</td></tr>
+      <tr><th>节点</th><th>决定了什么</th></tr>
+      <tr><td>双彩破产受理日</td><td>第19/21条中止起点；临界期（1年/6个月）起算点</td></tr>
+      <tr><td>中通 0 元转让发生日</td><td>2024-07-01 后→第 88 条转让人补责；在前→第 33 条路径</td></tr>
+      <tr><td>各抽逃出资行为日</td><td>是否在破产临界期内、是否构成第 33 条无效</td></tr>
+      <tr><td>国赔知道日 2025-02-06</td><td>国家赔偿 2 年时效起算（届满 2027-02-06）</td></tr>
     </table>
-    <div class="alert warn">这些日期直接决定「能不能撤、能不能追、适用哪条法」，务必先从材料库调取核对，再定诉状。</div>
+    <div class="alert warn"><b>提示：</b>首次 0 元转让（2022-10-27）发生在《公司法》第 88 条（2024-07-01 施行）之前，不能直接依第 88 条追究转让人补充责任，须转依第 33 条"为逃避债务隐匿转移财产"自始无效路径，辅以人格否认兜底。</div>
   </section>
 
-  <div class="pager">
-    <a href="parties.html">← 上一页：当事人图谱</a>
-    <a href="winrate.html">下一页：路径与胜率 →</a>
-  </div>
-  <footer class="ft">倍富案可视化 · ② 关键时间线　|　<a href="../index.html">总览</a></footer>
-</div>
+  <button class="print-btn" onclick="window.print()">🖨 打印 / 存 PDF</button>
+</main>
+
+<footer class="doc-foot">
+  倍富案可视化 · 律师阅卷版（由 WorkBuddy 汇总本案系列分析整理，已脱敏）　｜　非法律意见，仅供策略研讨；正式维权须由承办律师复核定稿。
+</footer>
+<script src="../assets/nav.js"></script>
+<script src="../assets/theme.js"></script>
 </body>
 </html>

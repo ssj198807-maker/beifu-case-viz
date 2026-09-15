@@ -1,20 +1,24 @@
-// 明暗主题切换（共享）
+/* 倍富案 · 多页主题切换（明暗双主题，跨页持久化）
+   每个页面头部建议放置无闪烁初始化：
+   <script>document.documentElement.dataset.theme=localStorage.getItem('beifu-theme')||'light';</script>
+   本脚本负责按钮交互与状态同步（须在 nav.js 之后引入）。 */
 (function(){
+  var KEY = 'beifu-theme';
   function apply(t){
     document.documentElement.setAttribute('data-theme', t);
-    var btns = document.querySelectorAll('.theme-btn');
-    btns.forEach(function(b){ b.textContent = (t==='dark'?'☀ 浅色':'🌙 深色'); });
-    try{ localStorage.setItem('beifu-theme', t); }catch(e){}
+    var btn = document.querySelector('.theme-btn');
+    if(btn) btn.textContent = (t === 'dark') ? '☀ 浅色' : '🌙 深色';
   }
-  var saved = 'light';
-  try{ saved = localStorage.getItem('beifu-theme') || 'light'; }catch(e){}
+  var saved = localStorage.getItem(KEY) || document.documentElement.getAttribute('data-theme') || 'light';
   apply(saved);
-  document.addEventListener('DOMContentLoaded', function(){
-    document.querySelectorAll('.theme-btn').forEach(function(b){
-      b.addEventListener('click', function(){
-        var cur = document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
-        apply(cur);
-      });
-    });
+
+  // 事件委托：nav.js 注入的按钮在 DOM 中，监听 document 即可
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest && e.target.closest('.theme-btn');
+    if(!btn) return;
+    e.preventDefault();
+    var now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem(KEY, now);
+    apply(now);
   });
 })();
