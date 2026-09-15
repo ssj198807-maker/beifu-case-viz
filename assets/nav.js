@@ -1,4 +1,4 @@
-/* 倍富案 · 共享导航栏注入
+/* BF案 · 共享导航栏注入
    每个页面底部引入：<script src="assets/nav.js"></script>（根页）或 <script src="../assets/nav.js"></script>（子页）
    自动在 #site-header 渲染常驻顶部导航，并按当前页高亮；链接路径自适应根目录 / pages/ 两种位置。 */
 (function(){
@@ -30,7 +30,7 @@
 
   host.innerHTML =
     '<div class="nav-inner">' +
-      '<div class="nav-brand">倍富工业 · 中通系逃废债追责' +
+      '<div class="nav-brand">BF工业 · ZT系逃废债追责' +
         '<small>执行 + 破产 + 国家赔偿 · 三域复合案（已脱敏）</small></div>' +
       '<nav class="nav-links">' + links + '</nav>' +
       '<button class="theme-btn" type="button">🌙 深色</button>' +
